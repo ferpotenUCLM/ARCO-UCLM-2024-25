@@ -1,15 +1,15 @@
-#Platform Information
+# Platform Information
 
-##CPU Name
+## CPU Name
 
 Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz
 
-##Frequency
+## Frequency
 1,80 GHz
 
-##Logical CPU Count
+## Logical CPU Count
 8
 
-##Operating System
+## Operating System
 Linux
 
