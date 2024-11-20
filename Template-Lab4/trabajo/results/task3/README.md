@@ -61,7 +61,7 @@ Each results folder must be executable, meaning the professor should be able to 
 ## Combined Improvement
 Once each region has been parallelized separately, combine the results and complete the previous template.
 
-#IMPROVEMENTS
+# IMPROVEMENTS
 
 The file LBL_FAD_Transform_Operations.cpp have nested loops (for) pixel move & band:
 
@@ -98,8 +98,8 @@ for (int pixel = 0; pixel < blockSize; pixel++) {
     }
 }
 
-Versión paralelizada con OpenMP
 
+## USE OF COLLAPSE :
 #include <omp.h>
 
 #pragma omp parallel for collapse(2) num_threads(PARALLEL)
@@ -109,17 +109,17 @@ for (int pixel = 0; pixel < blockSize; pixel++) {
     }
 }
 
-Explanation:
+## EXPLANATION:
 
-    #pragma omp parallel for: Parallelize the following loop.
-    collapse(2): Combines the iterations of the two loops (pixel and band) to parallelize them together, improving efficiency in nested structures.
-    num_threads(PARALLEL): Controls the number of threads used, defined as a constant (PARALLEL).
-    Shared and private variables: Be sure to declare variables like Img, projection, and qVector as shared if all threads need access to them.
+#pragma omp parallel for: Parallelize the following loop.
+collapse(2): Combines the iterations of the two loops (pixel and band) to parallelize them together, improving efficiency in nested structures.
+num_threads(PARALLEL): Controls the number of threads used, defined as a constant (PARALLEL).
+Shared and private variables: Be sure to declare variables like Img, projection, and qVector as shared if all threads need access to them.
 
 
 
-    Include #include <omp.h>: Added the header needed to use OpenMP.
-    OpenMP directives:
-        I added #pragma omp parallel for collapse(2) for nested loops that traverse pixels and bands.
-        I used num_threads(4) as an example to specify the number of threads.
-    Other optimizations: Applied only in clearly parallelizable loops, ensuring that iterations do not depend on each other.
+Include #include <omp.h>: Added the header needed to use OpenMP.
+OpenMP directives:
+I added #pragma omp parallel for collapse(2) for nested loops that traverse pixels and bands.
+I used num_threads(4) as an example to specify the number of threads.
+Other optimizations: Applied only in clearly parallelizable loops, ensuring that iterations do not depend on each other.
