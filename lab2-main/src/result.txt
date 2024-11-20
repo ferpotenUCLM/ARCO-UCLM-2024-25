@@ -1,0 +1,9 @@
+id: 0 ,numero_HILOS : 4 ,tamaño_div: 12 ,val_sum_inicio: 0 , val_sum_hasta: 12 
+id: 1 ,numero_HILOS : 4 ,tamaño_div: 12 ,val_sum_inicio: 12 , val_sum_hasta: 24 
+id: 3 ,numero_HILOS : 4 ,tamaño_div: 12 ,val_sum_inicio: 36 , val_sum_hasta: 50 
+id: 2 ,numero_HILOS : 4 ,tamaño_div: 12 ,val_sum_inicio: 24 , val_sum_hasta: 36 
+
+Vector de números: 
+ 87 	60 	95 	77 	2 	12 	67 	97 	26 	65 	78 	32 	57 	83 	48 	28 	82 	88 	91 	28 	6 	43 	13 	14 	74 	94 	4 	20 	67 	49 	70 	54 	61 	66 	84 	63 	30 	3 	13 	8 	69 	91 	41 	26 	26 	89 	6 	60 	77 	49 	
+ La suma es: 2573 
+
