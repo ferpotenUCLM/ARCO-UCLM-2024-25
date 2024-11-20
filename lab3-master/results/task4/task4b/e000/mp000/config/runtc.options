@@ -1,0 +1,9 @@
+-r
+/home/fernando/Descargas/lab3-master/results/task4/task4b/e000/mp000
+-quiet
+--tool=map
+--record-stack-frame
+--sample-size=300000
+--record-mem-allocations
+--
+./complex
