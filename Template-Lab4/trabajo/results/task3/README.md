@@ -78,13 +78,14 @@ for (int i = 0; i < width * height; i++) {
     // Operaciones en los píxeles
 }
 
-Parallelization strategy for LBL_FAD_Transform_Operations.cpp:
+## Parallelization strategy for LBL_FAD_Transform_Operations.cpp:
 
-    Identify independent loops and candidates for parallelization. For example, loops over pixels, bands or independent iterations like iter.
-    Insert #pragma omp directives before loops. Make sure:
-        Define private or shared variables with private and shared.
-        Specify the number of threads (num_threads).
-        Use scheduling strategies such as static or dynamic.
+Identify independent loops and candidates for parallelization. For example, loops over pixels, bands or independent iterations like iter.
+
+Insert #pragma omp directives before loops.
+Define private or shared variables with private and shared.
+Specify the number of threads (num_threads).
+Use scheduling strategies such as static or dynamic.
 
 
 
