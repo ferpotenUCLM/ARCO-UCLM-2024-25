@@ -92,22 +92,22 @@ Parallelization strategy for LBL_FAD_Transform_Operations.cpp:
 
 Loop in LBL_FAD_Transform_Operations.cpp:
 
-for (int pixel = 0; pixel < blockSize; pixel++) {
-    for (int band = 0; band < BANDS; band++) {
-        Img[pixel * BANDS + band] -= projection[pixel] * qVector[band];
+    for (int pixel = 0; pixel < blockSize; pixel++) {
+        for (int band = 0; band < BANDS; band++) {
+            Img[pixel * BANDS + band] -= projection[pixel] * qVector[band];
+        }
     }
-}
 
 
 ## USE OF COLLAPSE :
-#include <omp.h>
+    #include <omp.h>
 
-#pragma omp parallel for collapse(2) num_threads(PARALLEL)
-for (int pixel = 0; pixel < blockSize; pixel++) {
-    for (int band = 0; band < BANDS; band++) {
-        Img[pixel * BANDS + band] -= projection[pixel] * qVector[band];
+    #pragma omp parallel for collapse(2) num_threads(PARALLEL)
+    for (int pixel = 0; pixel < blockSize; pixel++) {
+        for (int band = 0; band < BANDS; band++) {
+            Img[pixel * BANDS + band] -= projection[pixel] * qVector[band];
+        }
     }
-}
 
 ## EXPLANATION:
 
