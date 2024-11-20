@@ -1,6 +1,6 @@
 # Comparative Report on Serial and Parallel Programs Using OpenMP
 
-##Serial Program
+## Serial Program
 
 The serial program performs the following tasks:
 
